@@ -105,7 +105,7 @@ resource "aws_instance" "ec2_instance" {
   }
 
 }
-# print the url of the Master and Node
-output "container_url" {
+# print the url of the Master and Nodes
+output "master&nodes_url" {
  value = ["${aws_instance.ec2_instance.*.public_ip}"]
 }
